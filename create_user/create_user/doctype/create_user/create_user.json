@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "autoname": "field:email",
+ "creation": "2021-09-19 12:47:30.331605",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "email",
+  "first_name",
+  "role_profile",
+  "column_break_5",
+  "password",
+  "unit_section_section",
+  "unit_name",
+  "unit_type",
+  "provost_group",
+  "battalion",
+  "company"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password"
+  },
+  {
+   "fieldname": "role_profile",
+   "fieldtype": "Link",
+   "label": "Role Profile",
+   "options": "Role Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_section_section",
+   "fieldtype": "Section Break",
+   "label": "Unit Section"
+  },
+  {
+   "fetch_from": "unit_name.unit_type",
+   "fieldname": "unit_type",
+   "fieldtype": "Data",
+   "label": "Unit Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "unit_name.provost_group",
+   "fieldname": "provost_group",
+   "fieldtype": "Data",
+   "label": "Provost Group",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "unit_name.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "unit_name.battalion",
+   "fieldname": "battalion",
+   "fieldtype": "Data",
+   "label": "Battalion",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Link",
+   "label": "Unit Name",
+   "options": "Unit Hierarchy",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-26 21:35:38.069505",
+ "modified_by": "Administrator",
+ "module": "Create User",
+ "name": "Create User",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "User Creator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Investigator",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Desk NCO",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Commander",
+   "share": 1
+  }
+ ],
+ "search_fields": "first_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
